@@ -10,10 +10,22 @@
     android:orientation="vertical"
     tools:context="com.czettner.tourguide.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/more"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/eat_out" />
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_button_height"
+            android:paddingStart="@dimen/activity_vertical_margin"
+            android:textSize="@dimen/main_button_textsize"
+            android:gravity="center_vertical"
+            android:background="@android:color/holo_orange_light"
+            android:text="@string/eat_out" />
+    </FrameLayout>
+    
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
