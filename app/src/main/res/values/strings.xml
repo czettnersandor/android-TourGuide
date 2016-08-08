@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Tour Guide Páty</string>
+    <string name="title_activity_triptarget">TriptargetActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="eat_out">Eat out</string>
+    <string name="walk">Walk</string>
+    <string name="sport">Sport</string>
+    <string name="annual_events">Annual events</string>
+</resources>
