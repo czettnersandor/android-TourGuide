@@ -17,4 +17,29 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="home_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/main_button_height</item>
+        <item name="android:paddingStart">@dimen/main_icon_margin</item>
+        <item name="android:textSize">@dimen/main_button_textsize</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@android:color/holo_orange_light</item>
+    </style>
+
+    <style name="home_framelayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="main_icon">
+        <item name="android:layout_width">@dimen/main_icon_size</item>
+        <item name="android:layout_height">@dimen/main_icon_size</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">@dimen/activity_vertical_margin</item>
+    </style>
+
 </resources>

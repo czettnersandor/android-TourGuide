@@ -3,39 +3,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
     tools:context="com.czettner.tourguide.MainActivity">
 
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/more"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:foreground="?attr/selectableItemBackground">
+        style="@style/home_framelayout">
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/main_button_height"
-            android:paddingStart="@dimen/activity_vertical_margin"
-            android:textSize="@dimen/main_button_textsize"
-            android:gravity="center_vertical"
-            android:background="@android:color/holo_orange_light"
+            style="@style/home_button"
             android:text="@string/eat_out" />
+        <ImageView
+            android:src="@drawable/ic_restaurant_white_48dp"
+            style="@style/main_icon" />
     </FrameLayout>
-    
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/walk" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sport" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/annual_events" />
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/home_framelayout">
+
+        <TextView
+            style="@style/home_button"
+            android:text="@string/walk" />
+        <ImageView
+            android:src="@drawable/ic_directions_walk_white_48dp"
+            style="@style/main_icon" />
+    </FrameLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/home_framelayout">
+
+        <TextView
+            style="@style/home_button"
+            android:text="@string/sport" />
+        <ImageView
+            android:src="@drawable/ic_directions_bike_white_48dp"
+            style="@style/main_icon" />
+    </FrameLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/home_framelayout">
+
+        <TextView
+            style="@style/home_button"
+            android:text="@string/annual_events" />
+        <ImageView
+            android:src="@drawable/ic_local_activity_white_48dp"
+            style="@style/main_icon" />
+    </FrameLayout>
 </LinearLayout>
