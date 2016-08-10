@@ -12,6 +12,10 @@ public class Triptarget {
         mImageResource = imageResource;
     }
 
+    public String getName() {
+        return mName;
+    }
+
     public void setPhoneNumber(String mPhoneNumber) {
         this.mPhoneNumber = mPhoneNumber;
     }
