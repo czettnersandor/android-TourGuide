@@ -2,6 +2,12 @@ package com.czettner.tourguide;
 
 import java.util.ArrayList;
 
+/**
+ * Later we can query an XML feed to get the most up to date date from a server
+ * For now, let's hard code some visitor attractions here.
+ *
+ * TODO: translate the Hungarian text to english
+ */
 public class TriptargetListFactory {
     public static final String ITEMS_EAT_OUT = "eat-out";
     public static final String ITEMS_WALK = "walk";
@@ -18,10 +24,10 @@ public class TriptargetListFactory {
                 res = getWalkList();
                 break;
             case ITEMS_SPORT:
-                res = getWalkList();
+                res = getSportList();
                 break;
             case ITEMS_EVENTS:
-                res = getWalkList();
+                res = getEventsList();
                 break;
         }
 
@@ -49,8 +55,25 @@ public class TriptargetListFactory {
 
     public static ArrayList<Triptarget> getWalkList() {
         ArrayList<Triptarget> res = new ArrayList<>();
-        res.add(new Triptarget("Walk 1", "Test",
-                R.drawable.ic_local_activity_white_48dp));
+        res.add(new Triptarget("Nagy-Kopasz", "A Budai-hegység legmagasabb pontja, a Nagy-Kopasz (559 m) tetején álló, óriási vitorlára emlékeztető, modern Csergezán Pál-kilátóból parádés panoráma nyílik a környező tájra. A hegy déli oldalában, a Tarnai pihenőnél pedig elragadóan szép dolomitgyepes környéken csodálhatjuk a meseszép kilátást.",
+                R.drawable.walk_nagykopasz));
+        res.add(new Triptarget("Pincesor", "Több mint száz pince rejtőzik a lombos fák árnyékában, csendes, békés környezetben. A hagyományosan is Pincehegyként nevezett területen a pincesorok egymás alatt egy-két sorban helyezkednek el.", R.drawable.walk_pincesor));
+        res.add(new Triptarget("Fenyves", "Van itt tanösvény, parkerdő, kőbánya, minden, ami ahhoz kell, hogy egy kirándulás közben jól érezd magadat.", R.drawable.walk_fenyves));
+        return res;
+    }
+
+    public static ArrayList<Triptarget> getSportList() {
+        ArrayList<Triptarget> res = new ArrayList<>();
+        res.add(new Triptarget("Bellandor Lovasközpont", "A \"BELLANDOR\" lovasközpontban, amely a Zsámbéki-medence szívében, Pátyon fekszik megtalálható az ősrégi magyar hármashangzat: ember, ló és a természet egysége. A lovasközpont teljeskörű szolgáltatást kínál azoknak, akik a lovak iránt érdeklődőnek és látványos természetes környezetben keresik a pihenést.", R.drawable.sport_lovarda));
+        res.add(new Triptarget("Sport field", "mainly used for footbal events", R.drawable.sport_football));
+        return res;
+    }
+
+    public static ArrayList<Triptarget> getEventsList() {
+        ArrayList<Triptarget> res = new ArrayList<>();
+        res.add(new Triptarget("Christmas", "With three beautiful churches, The town gives a warming welcome every Christmas.", R.drawable.events_karacsony));
+        res.add(new Triptarget("Pincenapok", "Celebrating the harvest of the grapes with family events and concerts.", R.drawable.events_pincenapok));
+        res.add(new Triptarget("Kirajzas", "In every early spring, motorcycles are going out the first time of the year in roaring event celebrating the arrival of the good weather every biker dreamed of.", R.drawable.events_motoros));
         return res;
     }
 }
