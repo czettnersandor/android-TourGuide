@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         mSportFrame = (FrameLayout) findViewById(R.id.sport);
         mEventsFrame = (FrameLayout) findViewById(R.id.events);
 
+        // Setting up onClickListeners
         mEatOutFrame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

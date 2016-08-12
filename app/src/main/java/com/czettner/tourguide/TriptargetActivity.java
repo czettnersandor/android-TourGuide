@@ -62,6 +62,8 @@ public class TriptargetActivity extends AppCompatActivity
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+
+        // Start with the selected sections if coming from MainActivity
         mViewPager.setCurrentItem(startSection);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
@@ -107,8 +109,6 @@ public class TriptargetActivity extends AppCompatActivity
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_triptarget, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
         }
     }

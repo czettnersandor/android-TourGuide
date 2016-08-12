@@ -11,11 +11,6 @@ import com.czettner.tourguide.ItemTriptargetFragment.OnListFragmentInteractionLi
 
 import java.util.ArrayList;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link Triptarget} and makes a call to the
- * specified {@link OnListFragmentInteractionListener}.
- * TODO: Replace the implementation with code for your data type.
- */
 public class MyItemTriptargetRecyclerViewAdapter extends RecyclerView.Adapter<MyItemTriptargetRecyclerViewAdapter.ViewHolder> {
 
     private final ArrayList<Triptarget> mValues;
@@ -67,6 +62,7 @@ public class MyItemTriptargetRecyclerViewAdapter extends RecyclerView.Adapter<My
         public ViewHolder(View view) {
             super(view);
             mView = view;
+            // TODO: phone number, web address, etc if available
             mNameView = (TextView) view.findViewById(R.id.name);
             mContentView = (TextView) view.findViewById(R.id.description);
             mImageView = (ImageView) view.findViewById(R.id.list_image);

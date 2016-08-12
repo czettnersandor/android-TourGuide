@@ -17,10 +17,9 @@ import android.view.ViewGroup;
  */
 public class ItemTriptargetFragment extends Fragment {
 
-    // TODO: Customize parameter argument names
     private static final String ARG_SECTION_NUMBER = "section-number";
-    // TODO: Customize parameters
-    private int mSectionNumber = 1;
+
+    private int mSectionNumber = 0;
     private OnListFragmentInteractionListener mListener;
 
     /**
@@ -30,8 +29,6 @@ public class ItemTriptargetFragment extends Fragment {
     public ItemTriptargetFragment() {
     }
 
-    // TODO: Customize parameter initialization
-    @SuppressWarnings("unused")
     public static ItemTriptargetFragment newInstance(int sectionNumber) {
         ItemTriptargetFragment fragment = new ItemTriptargetFragment();
         Bundle args = new Bundle();
@@ -107,7 +104,6 @@ public class ItemTriptargetFragment extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnListFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onListFragmentInteraction(Triptarget item);
     }
 }
