@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.czettner.tourguide.ItemTriptargetFragment.OnListFragmentInteractionListener;
@@ -37,6 +38,7 @@ public class MyItemTriptargetRecyclerViewAdapter extends RecyclerView.Adapter<My
         holder.mItem = mValues.get(position);
         holder.mNameView.setText(mValues.get(position).getName());
         holder.mContentView.setText(mValues.get(position).getDescription());
+        holder.mImageView.setImageResource(mValues.get(position).getImageResource());
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +61,7 @@ public class MyItemTriptargetRecyclerViewAdapter extends RecyclerView.Adapter<My
         public final View mView;
         public final TextView mNameView;
         public final TextView mContentView;
+        public final ImageView mImageView;
         public Triptarget mItem;
 
         public ViewHolder(View view) {
@@ -66,6 +69,7 @@ public class MyItemTriptargetRecyclerViewAdapter extends RecyclerView.Adapter<My
             mView = view;
             mNameView = (TextView) view.findViewById(R.id.name);
             mContentView = (TextView) view.findViewById(R.id.description);
+            mImageView = (ImageView) view.findViewById(R.id.list_image);
         }
 
         @Override

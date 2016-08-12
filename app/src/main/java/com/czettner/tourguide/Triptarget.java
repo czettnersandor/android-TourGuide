@@ -2,6 +2,7 @@ package com.czettner.tourguide;
 
 public class Triptarget {
     protected String mName;
+
     protected int mImageResource;
     protected String mPhoneNumber;
     protected String mWebsite;
@@ -39,5 +40,9 @@ public class Triptarget {
 
     public String getDescription() {
         return mDescription;
+    }
+
+    public int getImageResource() {
+        return mImageResource;
     }
 }

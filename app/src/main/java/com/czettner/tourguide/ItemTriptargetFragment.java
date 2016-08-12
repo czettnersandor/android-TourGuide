@@ -64,7 +64,13 @@ public class ItemTriptargetFragment extends Fragment {
                     recyclerView.setAdapter(new MyItemTriptargetRecyclerViewAdapter(TriptargetListFactory.getTriptargetList(TriptargetListFactory.ITEMS_EAT_OUT), mListener));
                     break;
                 case 2:
-                    //recyclerView.setAdapter(new MyItemTriptargetRecyclerViewAdapter(Triptarget.ITEMS_WALK, mListener));
+                    recyclerView.setAdapter(new MyItemTriptargetRecyclerViewAdapter(TriptargetListFactory.getTriptargetList(TriptargetListFactory.ITEMS_WALK), mListener));
+                    break;
+                case 3:
+                    recyclerView.setAdapter(new MyItemTriptargetRecyclerViewAdapter(TriptargetListFactory.getTriptargetList(TriptargetListFactory.ITEMS_SPORT), mListener));
+                    break;
+                case 4:
+                    recyclerView.setAdapter(new MyItemTriptargetRecyclerViewAdapter(TriptargetListFactory.getTriptargetList(TriptargetListFactory.ITEMS_EVENTS), mListener));
                     break;
             }
 
