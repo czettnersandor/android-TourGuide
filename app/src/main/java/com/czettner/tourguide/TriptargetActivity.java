@@ -12,6 +12,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,6 +23,8 @@ import android.widget.TextView;
 
 public class TriptargetActivity extends AppCompatActivity
         implements ItemTriptargetFragment.OnListFragmentInteractionListener{
+
+    public static final String ARG_SECTION_NUMBER = "section_number";
 
     public void onListFragmentInteraction(Triptarget triptarget){
         //you can leave it empty
@@ -47,6 +50,8 @@ public class TriptargetActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_triptarget);
 
+        int startSection = getIntent().getIntExtra(ARG_SECTION_NUMBER, 1);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -57,6 +62,7 @@ public class TriptargetActivity extends AppCompatActivity
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        mViewPager.setCurrentItem(startSection);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
@@ -80,7 +86,7 @@ public class TriptargetActivity extends AppCompatActivity
          * The fragment argument representing the section number for this
          * fragment.
          */
-        private static final String ARG_SECTION_NUMBER = "section_number";
+        public static final String ARG_SECTION_NUMBER = "section_number";
 
         public PlaceholderFragment() {
         }
@@ -126,7 +132,7 @@ public class TriptargetActivity extends AppCompatActivity
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
+            // Show 4 total pages.
             return 4;
         }
 

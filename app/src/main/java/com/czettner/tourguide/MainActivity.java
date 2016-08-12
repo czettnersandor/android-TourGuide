@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     private FrameLayout mEatOutFrame;
     private FrameLayout mWalkFrame;
     private FrameLayout mSportFrame;
-    private FrameLayout mEvents;
+    private FrameLayout mEventsFrame;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,13 +21,40 @@ public class MainActivity extends AppCompatActivity {
         mEatOutFrame = (FrameLayout) findViewById(R.id.eat_out);
         mWalkFrame = (FrameLayout) findViewById(R.id.walk);
         mSportFrame = (FrameLayout) findViewById(R.id.sport);
-        mEvents = (FrameLayout) findViewById(R.id.events);
+        mEventsFrame = (FrameLayout) findViewById(R.id.events);
 
         mEatOutFrame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, TriptargetActivity.class);
-                //intent.putExtra(EXTRA_MESSAGE, message);
+                intent.putExtra(TriptargetActivity.ARG_SECTION_NUMBER, 0);
+                startActivity(intent);
+            }
+        });
+
+        mWalkFrame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TriptargetActivity.class);
+                intent.putExtra(TriptargetActivity.ARG_SECTION_NUMBER, 1);
+                startActivity(intent);
+            }
+        });
+
+        mSportFrame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TriptargetActivity.class);
+                intent.putExtra(TriptargetActivity.ARG_SECTION_NUMBER, 2);
+                startActivity(intent);
+            }
+        });
+
+        mEventsFrame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TriptargetActivity.class);
+                intent.putExtra(TriptargetActivity.ARG_SECTION_NUMBER, 3);
                 startActivity(intent);
             }
         });

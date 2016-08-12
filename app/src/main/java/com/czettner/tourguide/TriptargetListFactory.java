@@ -21,10 +21,27 @@ public class TriptargetListFactory {
 
     public static ArrayList<Triptarget> getEatOutList() {
         ArrayList<Triptarget> res = new ArrayList<>();
-        res.add(new Triptarget("Landora Pizza", R.drawable.ic_local_activity_white_48dp));
-        res.add(new Triptarget("Landora Pizza", R.drawable.ic_local_activity_white_48dp));
-        res.add(new Triptarget("Landora Pizza", R.drawable.ic_local_activity_white_48dp));
-        res.add(new Triptarget("Landora Pizza", R.drawable.ic_local_activity_white_48dp));
+        res.add(new Triptarget("Paagh étterem", "Szeretettel várjuk vendégeinket éttermünkben és bowling pályánkon. " +
+                "Vállalunk esküvőket, céges és családi rendezvényeket. " +
+                "Asztalfoglalás: Tel.06-30-948-3102 " +
+                "06-30-223-2006 " +
+                "Nyitva tartás a hét minden napján  10-22 óráig", R.drawable.ic_local_activity_white_48dp));
+        res.add(new Triptarget("Gastland M1 Hotel", "Informal lodging offering an informal restaurant, a wine cellar & free breakfast, plus a sauna.", R.drawable.ic_local_activity_white_48dp));
+        res.add(new Triptarget("Marché Bistro Páty", "A healty, fresh welcome to you from Marché Bistro " +
+                " Páty, your fresh food stop on the M1 from Budapest to Vienna. Come and discover the diverse," +
+                " regional and seasonal products and the fresh ingredients at the Marché Natural-Bakery for" +
+                " yourself. Enjoy the stop on your journey in our modern indoor area or the sunny outdoor terrace. ",
+                R.drawable.ic_local_activity_white_48dp));
+        res.add(new Triptarget("C'est La Vie Café", "Prémium kávé, ropogós croissant, francia gourmet sütemények," +
+                " csapolt prosecco, házi szörpök, ínyenc lekvárok és csokoládék, ajándéktárgyak, lakásdekor.",
+                R.drawable.ic_local_activity_white_48dp));
+        return res;
+    }
+
+    public static ArrayList<Triptarget> getWalkList() {
+        ArrayList<Triptarget> res = new ArrayList<>();
+        res.add(new Triptarget("Walk 1", "Test",
+                R.drawable.ic_local_activity_white_48dp));
         return res;
     }
 }

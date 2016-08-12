@@ -7,8 +7,9 @@ public class Triptarget {
     protected String mWebsite;
     protected String mDescription;
 
-    public Triptarget(String name, int imageResource) {
+    public Triptarget(String name, String description, int imageResource) {
         mName = name;
+        mDescription = description;
         mImageResource = imageResource;
     }
 
