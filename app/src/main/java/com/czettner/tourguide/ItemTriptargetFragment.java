@@ -56,21 +56,23 @@ public class ItemTriptargetFragment extends Fragment {
             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
             recyclerView.setLayoutManager(new LinearLayoutManager(context));
+            String itemsType  = TriptargetListFactory.ITEMS_EAT_OUT;
             switch (mSectionNumber) {
                 case 1:
-                    recyclerView.setAdapter(new MyItemTriptargetRecyclerViewAdapter(TriptargetListFactory.getTriptargetList(TriptargetListFactory.ITEMS_EAT_OUT), mListener));
+                    itemsType = TriptargetListFactory.ITEMS_EAT_OUT;
+                    recyclerView.setAdapter(new MyItemTriptargetRecyclerViewAdapter(TriptargetListFactory.getTriptargetList(TriptargetListFactory.ITEMS_EAT_OUT, getContext()), mListener));
                     break;
                 case 2:
-                    recyclerView.setAdapter(new MyItemTriptargetRecyclerViewAdapter(TriptargetListFactory.getTriptargetList(TriptargetListFactory.ITEMS_WALK), mListener));
+                    itemsType = TriptargetListFactory.ITEMS_WALK;
                     break;
                 case 3:
-                    recyclerView.setAdapter(new MyItemTriptargetRecyclerViewAdapter(TriptargetListFactory.getTriptargetList(TriptargetListFactory.ITEMS_SPORT), mListener));
+                    itemsType = TriptargetListFactory.ITEMS_SPORT;
                     break;
                 case 4:
-                    recyclerView.setAdapter(new MyItemTriptargetRecyclerViewAdapter(TriptargetListFactory.getTriptargetList(TriptargetListFactory.ITEMS_EVENTS), mListener));
+                    itemsType = TriptargetListFactory.ITEMS_EVENTS;
                     break;
             }
-
+            recyclerView.setAdapter(new MyItemTriptargetRecyclerViewAdapter(TriptargetListFactory.getTriptargetList(itemsType, getContext()), mListener));
         }
         return view;
     }
