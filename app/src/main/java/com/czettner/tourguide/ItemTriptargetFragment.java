@@ -56,7 +56,7 @@ public class ItemTriptargetFragment extends Fragment {
             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
             recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            String itemsType  = TriptargetListFactory.ITEMS_EAT_OUT;
+            int itemsType  = TriptargetListFactory.ITEMS_EAT_OUT;
             switch (mSectionNumber) {
                 case 1:
                     itemsType = TriptargetListFactory.ITEMS_EAT_OUT;

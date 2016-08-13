@@ -11,12 +11,12 @@ import java.util.ArrayList;
  * TODO: translate the Hungarian text to english
  */
 public class TriptargetListFactory {
-    public static final String ITEMS_EAT_OUT = "eat-out";
-    public static final String ITEMS_WALK = "walk";
-    public static final String ITEMS_SPORT = "sport";
-    public static final String ITEMS_EVENTS = "events";
+    public static final int ITEMS_EAT_OUT = 1;
+    public static final int ITEMS_WALK = 2;
+    public static final int ITEMS_SPORT = 3;
+    public static final int ITEMS_EVENTS = 4;
 
-    public static ArrayList<Triptarget> getTriptargetList(String targetType, Context context) {
+    public static ArrayList<Triptarget> getTriptargetList(int targetType, Context context) {
         ArrayList<Triptarget> res = new ArrayList<>();
         switch (targetType) {
             case ITEMS_EAT_OUT:
